@@ -493,3 +493,13 @@ gert-jan_theunissen:
   twitter: GJtheunissen
   github: gurtjun
   bio: Gert-jan is a Software Developer at Ordina Belgium. He is passionate about front end stuff, but you can easily throw him in the back end jungle and he will survive. In his spare time he's practising some knee dragging on his motorcycle.
+lenn_drijkoningen:
+  first_name: Lenn
+  last_name: Drijkoningen
+  permalink: /author/lenn-drijkoningen/
+  title: Software Engineer
+  email: lenn.drijkoningen@ordina.be
+  linkedin: lenn3k
+  avatar: lenn-drijkoningen.jpg
+  github: lenn3k
+  bio: Lenn is a Software Engineer at Ordina Belgium. His strengths lie in building quality front-end applications and fast prototyping using Angular. He loves solving difficult problems and requirements in order to get stuff working.
