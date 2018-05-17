@@ -31,7 +31,7 @@ Imagine a large group of people, every one of them interested in the same topic 
 How would you efficiently organise such a group so they can all have their say?
 Exactly, with an open space!
 
-> An open space is a method to gather a group of people
+> An open space is a method to gather a group of people around the same
 
 https://www.youtube.com/watch?v=WLAvlkrq7gE
 
