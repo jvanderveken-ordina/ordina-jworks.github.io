@@ -10,13 +10,13 @@ comments: true
 
 # Liquor Ticker
 
-Liquor Ticker is a new awesome Alcohol Sensor that reveals your alcohol level beatufilly on your screen.
+Liquor Ticker is a new awesome Alcohol Sensor that reveals your alcohol level beautifully on your screen.
 Just blow on the sensor and you'll see the beer flowing, the more you drank the more beer flows.
 
-The app indicates wether you are safe to drive or not by showing your alcohol level, a green or red color and multiple categories: Safe, Alarm and Positive.
-Safe meaning you are safe to drive, you barely drank any alcohol.
-Alarm means you aren't allowed to drive anymore, if you do you will lose your driver licence at least for 3 hours.
-Positive means your alcohol level is higher than 0.8 promille and you should definitely not get behind the wheel anymore.
+The app indicates whether you are safe to drive or not by showing your alcohol level, a green or red color and multiple categories: Safe, Alarm and Positive.
+- Safe meaning you are safe to drive, you barely drank any alcohol.
+- Alarm means you aren't allowed to drive anymore, if you do you will lose your driver licence at least for 3 hours.
+- Positive means your alcohol level is higher than 0.8 promille and you should definitely not get behind the wheel anymore.
 
 ## Back End
 For the back end we used NodeJS and NestJS on top of it.
