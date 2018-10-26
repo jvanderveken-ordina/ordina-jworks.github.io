@@ -20,14 +20,18 @@ The app indicates whether you are safe to drive or not by showing your alcohol l
 
 ## Back End
 For the back end we used NodeJS and NestJS on top of it.
+Our NestJS app recieves a http package with the alcohol level 
+
 
 ## Front End
 The front end exists of a Angular app.
+This Angular app was originally part of the NodeSimpleServer from [this blog post](/iot/2017/01/21/Node-with-TypeScript.html).
+
 
 ## Deployment
 We deployed Liquor Ticker on 2 cloud platforms: SAP Cloud and Openshift.
 
-## Openshift
+### Openshift
 
 
-## SAP Cloud
+### SAP Cloud
