@@ -71,9 +71,19 @@ Both our back end and front end projects are deployed as seperate applications o
 The two applications have a lot in common in the way they are set up because they are both NodeJS apps.
 
 #### Jenkins
-Also both use a jenkins pipeline to enable a CI/CD process.
+Both applications use a Jenkins pipeline to enable a CI/CD process with GitHub.
 
+We used it to set up both the back end as front end to be able to easily redeploy both projects. 
+This makes it effortless to add multiple building stages.
 
+To add Jenkins to our projects we had to create a new SSH key to link the GitHub repository to each application. 
+It is very straightforward to add a new private key in Openshift and to add its public key on GitHub.
+
+#### Routing
+They key difference between both projects is that the back end works with a websocket which uses another port. This means we needed to add another unique route to this project to expose the websockets port.
+
+#### Docker
+To build the images of the applications we make use of Docker.
 
 
 
