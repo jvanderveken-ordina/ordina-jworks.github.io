@@ -27,7 +27,7 @@ The beer level will be calculated based on the promille and send to the front en
 To communicate with the front end, we make use of the NestJS websocket library.
 We first create a 'WebSocketGateway' which is responsible for putting the calculated data onto the websocket.
 
-```
+```javascript
 @WebSocketGateway(8000, { namespace: 'socket' })
 export class BoozeLevelGateway {
 
@@ -44,7 +44,7 @@ export class BoozeLevelGateway {
 
 This gateway gets called in the Service where it emits the data onto the websocket.
 
-```
+```javascript
 this._gateway.emit('app-event', JSON.stringify(level));
 ```
 
@@ -54,7 +54,7 @@ This Angular app was originally part of the NodeSimpleServer from [this blog pos
 
 The front end listens to the websocket and when it receives data the view gets rendered based upon this data.
 
-```
+```javascript
 this.socket.connect();
 this.socket.on('app-event', (message) => {
     ... // View gets rendered.
