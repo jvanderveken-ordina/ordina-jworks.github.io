@@ -11,7 +11,7 @@ comments: true
 # Liquor Ticker
 
 Liquor Ticker is a new awesome Alcohol Sensor that reveals your alcohol level beautifully on your screen.
-Just blow on the sensor and you'll see the beer flowing, the more you drank the more beer flows.
+Just blow on the sensor and you'll see the beer flowing, the more you drank, the more beer flows.
 
 The app indicates whether you are safe to drive or not by showing your alcohol level, a green or red color and multiple categories: Safe, Alarm and Positive.
 - Safe meaning you are safe to drive, you barely drank any alcohol.
@@ -19,19 +19,64 @@ The app indicates whether you are safe to drive or not by showing your alcohol l
 - Positive means your alcohol level is higher than 0.8 promille and you should definitely not get behind the wheel anymore.
 
 ## Back End
-For the back end we used NodeJS and NestJS on top of it.
-Our NestJS app recieves a http package with the alcohol level 
+As back end we made a simple NodeJS application with NestJS framework on top of it.
 
+Our NestJS app receives a HTTP package which contains the alcohol level. 
+The beer level will be calculated based on the promille and send to the front end together with the alcohol level. 
+
+To communicate with the front end, we make use of the NestJS websocket library.
+We first create a 'WebSocketGateway' which is responsible for putting the calculated data onto the websocket.
+
+```
+@WebSocketGateway(8000, { namespace: 'socket' })
+export class BoozeLevelGateway {
+
+    constructor() { }
+
+    @WebSocketServer()
+    private server: any;
+
+    emit(event, data) {
+        this.server.emit(event, data);
+    }
+}
+```
+
+This gateway gets called in the Service where it emits the data onto the websocket.
+
+```
+this._gateway.emit('app-event', JSON.stringify(level));
+```
 
 ## Front End
-The front end exists of a Angular app.
+The front end exists of an Angular app.
 This Angular app was originally part of the NodeSimpleServer from [this blog post](/iot/2017/01/21/Node-with-TypeScript.html).
+
+The front end listens to the websocket and when it receives data the view gets rendered based upon this data.
+
+```
+this.socket.connect();
+this.socket.on('app-event', (message) => {
+    ... // View gets rendered.
+}
+```
 
 
 ## Deployment
-We deployed Liquor Ticker on 2 cloud platforms: SAP Cloud and Openshift.
+We deployed Liquor Ticker on two cloud platforms: SAP Cloud Foundry and Openshift. 
+The reason why we deployed it on different platforms, is to see the time differences of those two platforms when we push data.
 
 ### Openshift
+Both our back end and front end projects are deployed as seperate applications on JWorks Openshift.
+The two applications have a lot in common in the way they are set up because they are both NodeJS apps.
+
+#### Jenkins
+Also both use a jenkins pipeline to enable a CI/CD process.
 
 
-### SAP Cloud
+
+
+
+
+### SAP Cloud Foundry
+SAP Cloud Foundry is an open-source cloud application platform. Cloud Foundry makes it faster and easier to build, test, deploy and scale applications.
