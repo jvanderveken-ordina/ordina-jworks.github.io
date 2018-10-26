@@ -2,9 +2,9 @@
 layout: post
 authors: [talha-demirci, michael_dewree, sander_smets, frederick_bousson, axel_bergmans]
 title: "Liquor Ticker"
-image: 
+image: /img/2018-10-26-Lead-Dev-London-2018/lead-dev.png
 tags: [Angular, NodeJS, NestJS, SAP Cloud, Openshift]
-category: 
+category: IoT
 comments: true
 ---
 
