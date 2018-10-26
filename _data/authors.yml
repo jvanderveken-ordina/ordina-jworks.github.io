@@ -694,3 +694,13 @@ sander_smets:
   title: Java Developer
   email: sander.smets@ordina.be
   bio: As a software developer, Sander likes to develop a project in its entirety. Databases either SQL or noSQL, front-end technologies like Angular, and backend technologies like Spring Boot, it doesn't matter what technologies are used. As long as the project has value, Sander will get the job done.
+talha_demirci:
+  first_name: Talha
+  last_name: Demirci
+  github: Talha01
+  linkedin: talha-demirci-483377121
+  permalink: /author/talha_demirci/
+  avatar: talha-demirci.jpeg
+  title: Technical SAP Consultant
+  email: talha.demirci@ordina.be
+  bio: Technical SAP Consultant bij Ordina Belgium
