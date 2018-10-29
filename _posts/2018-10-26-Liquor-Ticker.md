@@ -1,6 +1,6 @@
 ---
 layout: post
-authors: [talha-demirci, michael_dewree, sander_smets, frederick_bousson, axel_bergmans]
+authors: [talha_demirci, michael_dewree, sander_smets, frederick_bousson, axel_bergmans]
 title: "Liquor Ticker"
 image: /img/2018-10-26-Lead-Dev-London-2018/lead-dev.png
 tags: [Angular, NodeJS, NestJS, SAP Cloud, Openshift]
