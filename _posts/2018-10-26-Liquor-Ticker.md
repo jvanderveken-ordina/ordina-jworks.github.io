@@ -85,8 +85,17 @@ They key difference between both projects is that the back end works with a webs
 #### Docker
 To build the images of the applications we make use of Docker.
 
-
-
-
 ### SAP Cloud Foundry
 SAP Cloud Foundry is an open-source cloud application platform. Cloud Foundry makes it faster and easier to build, test, deploy and scale applications.
+
+#### Buildpack
+Instead of Docker, we used the buildpack of NodeJS that is provided by Cloud Foundry. 
+Buildpacks provide framework and runtime support for apps. 
+Buildpacks typically examine your apps to determine what dependencies to download and how to configure the apps to communicate with bound services.
+
+#### Routing
+Cloud Foundry only listens on port 8080. That's the reason why the both ports of the applications were exposed on 8080. 
+That's not a problem because both applications are in different containers. 
+Otherwise it will give a error 'Address already in use'.
+Also another difference with Openshift is that you don't have to give the port where the websocket is listening. 
+When you leave this blank, Cloud Foundry will automaticaly search for a suitable port (in this case 8080).
